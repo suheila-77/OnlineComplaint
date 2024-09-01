@@ -41,9 +41,9 @@ const Admin = () => {
 
             </tr>
 
-            {complaints.map((data) => (
+            {complaints.map((data,index) => (
               <tr>
-                <td className="p-3 border">{complaints.length}</td>
+                <td className="p-3 border">{index+1}</td>
                 <td className="p-3 border">{data.Title}</td>
                 <td className="p-3 border">{data.Description.substring(0, 10)}...</td>
                 <td className="p-3 border">{new Date().toString()}</td>
