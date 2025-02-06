@@ -18,7 +18,7 @@ const HomePage = () => {
         <p className="text-lg mb-8">We value your feedback. Register your complaint easily and get fast responses.</p>
         
         <Link 
-          to="/register"
+          to="/reg"
           className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300"
         >
           Register Complaint

@@ -34,6 +34,7 @@ const Admin = () => {
 
             <tr>
               <th className="text-teal-600  p-3 border">S.N</th> 
+              <th className="p-3 border">email</th>
               <th className="p-3 border">Title</th>
               <th className="p-3 border">Description</th>
               <th className="p-3 border">Date & Time</th>
@@ -44,6 +45,7 @@ const Admin = () => {
             {complaints.map((data,index) => (
               <tr>
                 <td className="p-3 border">{index+1}</td>
+                <td className="p-3 border">{data.email}</td>
                 <td className="p-3 border">{data.Title}</td>
                 <td className="p-3 border">{data.Description.substring(0, 10)}...</td>
                 <td className="p-3 border">{new Date().toString()}</td>

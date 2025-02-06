@@ -6,9 +6,12 @@ import User from './Pages/User';
 import About from './Components/About';
 import HomePage from './Components/HomePage';
 import RegisterComplaint from "./Pages/RegisterComplaint"
+import RegisterForm from './Pages/RegisterForm';
+import Signin from './Pages/Signin';
 
 import Dashboard from './Pages/Dashboard';
 import ViewPage from './Pages/ViewPage';
+
 
 
 const App = () => {
@@ -31,6 +34,8 @@ const App = () => {
      <Route path='/view' element={<ViewPage/>}/>
 
      <Route path='/dashboard' element={<Dashboard/>}/>
+     <Route path='reg' element= {<RegisterForm/>}/>
+     <Route path='/signin' element = {<Signin/>}/>
 
 
       
