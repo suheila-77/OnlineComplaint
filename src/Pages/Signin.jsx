@@ -27,36 +27,52 @@ const Signin = ({ onClose }) => {
     };
 
     return (
-        <div className="fixed inset-0 bg-gradient-to-r from-teal-500 to-blue-500 flex items-center justify-center p-4">
-            <div className="bg-gray-900 text-white p-8 rounded-lg shadow-2xl w-full max-w-sm relative">
-                <button onClick={onClose} className="absolute top-2 right-2 text-gray-400 hover:text-white text-xl">&times;</button>
-                <h2 className="text-3xl font-bold mb-6 text-center">Signin to make a complaint</h2>
-                
-                <form onSubmit={handleRegister} className="space-y-4">
-                    <input 
-                        type="text" 
-                        placeholder="Username" 
-                        value={username} 
-                        onChange={(e) => setUsername(e.target.value)} 
-                        className="bg-gray-700 p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
-                    />
-                   
-                    <input 
-                        type="password" 
-                        placeholder="Password" 
-                        value={password} 
-                        onChange={(e) => setPassword(e.target.value)} 
-                        className="bg-gray-700 p-3 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
+        <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-teal-500 to-blue-600 p-4">
+            <div className="bg-white p-10 rounded-lg shadow-xl w-full max-w-sm relative">
+                <button 
+                    onClick={onClose} 
+                    className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-semibold transition-all"
+                >
+                    &times;
+                </button>
+
+                <h2 className="text-4xl font-extrabold text-center text-teal-600 mb-8">
+                    Sign In to Make a Complaint
+                </h2>
+
+                <form onSubmit={handleRegister} className="space-y-6">
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        className="w-full p-5 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all"
                     />
                     
-                    <button className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg w-full transition duration-300">
-                      Login
-                      
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="w-full p-5 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all"
+                    />
+
+                    <button 
+                        className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 rounded-lg transition-all duration-300"
+                    >
+                        Login
                     </button>
-                  
                 </form>
 
-               
+                <p className="text-center text-gray-500 mt-6">
+                    Don't have an account? 
+                    <span
+                        onClick={() => navigate('/register')}
+                        className="text-teal-600 cursor-pointer hover:text-teal-700 font-semibold"
+                    >
+                        Register Now
+                    </span>
+                </p>
             </div>
         </div>
     );
